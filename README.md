@@ -1,6 +1,6 @@
 <h1 align="center" > RedisAPI </h1>
 <h2 align="center">
-    <a href="https://docs.microsoft.com/pt-br/aspnet/web-api/">🔗 API Livro de reservas</a>
+    <a href="https://docs.redis.com/latest/rs/references/client_references/client_csharp/">🔗 Redis Api</a>
 </h2>
 <p align="center"> Uma API simples para aprender os principios do redis</p>
 <p align="center">
