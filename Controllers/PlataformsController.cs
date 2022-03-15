@@ -18,7 +18,8 @@ namespace CacheService.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Platform>> GetPlatforms()
         {
-            return Ok(_repository.GetAllPlatforms());
+            var platforms = _repository.GetAllPlatforms();
+            return Ok(platforms);
         }
 
         [HttpGet("{id}", Name="GetPlatformById")]
@@ -36,7 +37,7 @@ namespace CacheService.Controllers
         }
 
         [HttpPost]
-        public ActionResult <Platform> CreatePlatform(Platform platform)
+        public ActionResult <Platform> CreatePlatform( Platform platform)
         {
             _repository.CreatePlatform(platform);
 

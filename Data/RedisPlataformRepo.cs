@@ -29,11 +29,11 @@ namespace RedisAPI.Data
 
         }
 
-        public IEnumerable<Platform?>? GetAllPlatforms()
+  public IEnumerable<Platform?>? GetAllPlatforms()
         {
-             var db = _redis.GetDatabase();
+            var db = _redis.GetDatabase();
 
-            var completeSet = db.HashGetAll("hashplatform");
+            var completeSet = db.HashGetAll("PlatformHash");
             
             if (completeSet.Length > 0)
             {
@@ -51,7 +51,7 @@ namespace RedisAPI.Data
 
             //var plat = db.StringGet(id);
 
-            var plat = db.HashGet("hashplatform", id);
+            var plat = db.HashGet("PlatformHash", id);
 
             if (!string.IsNullOrEmpty(plat))
             {
@@ -59,6 +59,7 @@ namespace RedisAPI.Data
             }
             return null;
         }
+
     }
 
 }
